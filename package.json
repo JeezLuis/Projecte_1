@@ -1,0 +1,18 @@
+{
+  "name": "projecte_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare-mac": "rm -rf dist",
+    "build-mac": "npm run prepare-mac && html-minifier --input-dir src --output-dir dist --file-ext html --remove-comments --collapse-whitespace"
+  },
+  "author": "Jordi Pacreu, Roger Casas, Lluis Farre",
+  "license": "ISC",
+  "devDependencies": {
+    "check-html-links": "^0.2.3",
+    "clean-css": "^5.2.2",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.9.0"
+  }
+}
