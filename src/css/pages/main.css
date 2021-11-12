@@ -1,0 +1,129 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F1F1F1;
+    padding: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+}
+
+nav{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+nav div{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+nav div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav h3{
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    margin: 0px;
+}
+
+nav p{
+    font-weight: 400;
+    color: #808080;
+    font-size: 14px;
+    margin: 0px;
+}
+
+nav a{
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 20px;
+    width: 100%;
+}
+
+nav .selected {
+    color: #6247AA;
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.68);
+}
+
+nav .unselected{
+    color: #000000;
+    text-shadow: unset;
+}
+
+.today:before {
+    display: inline-flex;
+    content: '';
+    background-image: url("../../media/img/today-outline-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    padding-right: 10px;
+}
+
+.all-duties:before {
+    display: inline-flex;
+    content: '';
+    background-image: url("../../media/img/list-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    padding-right: 10px;
+}
+
+.categories:before {
+    display: inline-flex;
+    content: '';
+    background-image: url("../../media/img/categories-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+    padding-right: 10px;
+}
+
+.button {
+    font-weight: 500;
+    font-size: 24;
+    border: unset;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 70%;
+}
+
+.hard-color-b{
+    background-color: #6247AA;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.light-color-b{
+    background-color: #AAA1C8;    
+    color: #000000;
+}
+
+.lighter-color-b {
+    background-color: rgba(170, 161, 200, 0.75);
+    color: #000000;
+}
+
+.disabled-b{
+    visibility: hidden;
+}
