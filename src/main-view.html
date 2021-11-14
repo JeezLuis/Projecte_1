@@ -32,7 +32,7 @@
                     <p id="urgent">1 urgent</p>
                 </div>
             </div>
-            <a href="task-form.html" class="button hard-color-b">Add TODO</a>
+            <a onclick="openForm(0,0)" class="button hard-color-b">Add TODO</a>
             <a href="" class="today">Today</a>
             <a href="" class="all-duties selected">All Duties</a>
             <a href="" class="categories">Categories</a>
@@ -44,7 +44,7 @@
                 <button class="button light-color-b">Select All</button>
 
                 <button class="do button"><object data="media/img/tick-svgrepo-com.svg"></object></button>
-                <button class="delete button"><object data="media/img/trash-svgrepo-com.svg"></object></button>
+                <button class="delete button" onclick="deleteSelected()"><object data="media/img/trash-svgrepo-com.svg"></object></button>
 
                 <form role="search" id="form">
                     <input type="search" id="query" name="q" placeholder="">
@@ -55,30 +55,7 @@
             </div>
             
             <div id="tasques" class="task-list">
-
-                <!--Principi tasca-->
-                <div class="task">
-                    <div class="select selected-task" onClick="console.log('Test')">
-                        <object data="media/img/checkbox-svgrepo-com.svg"> </object>
-                    </div>
-                    
-                    <div class="task-info">
-                        <img src="media/img/jojo_logo_small.png" alt="">
-                        <div class="task-main">
-                            <h2>Web Projects</h2>
-                            <p>Bla bla bla...</p>
-                        </div>
-                        <div class="task-extra">
-                            <div>
-                                <p class="urgent">Urgent!</p>
-                                <p>20/11/2021</p>
-                            </div>
-                            <p class="blue">Miscellaneous</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Fi tasca-->
-            
+                
             </div>
         </div>
         

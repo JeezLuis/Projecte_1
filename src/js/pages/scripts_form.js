@@ -4,7 +4,7 @@ Author: Roger Casas Aisa (roger.casas)
 */
 let check = localStorage.getItem("modify");
 if(check == ""){
-    document.getElementById("task_accept").onclick = `errorCheck(0,0)`;
+    document.getElementById("task_accept").setAttribute('onclick',`errorCheck(0, 0)`);
     document.getElementById("task_name").value = "";
     document.getElementById("task_deadline").value = "";
     document.getElementById("category_list").value = "";
@@ -22,7 +22,7 @@ if(check == ""){
     let aux_completed = aux.split('$')[5];
     let aux_logo = aux.split('$')[6];
 
-    document.getElementById("task_accept").onclick =`errorCheck(1, ${aux_id})`;
+    document.getElementById("task_accept").setAttribute('onclick',`errorCheck(1, ${aux_id})`);
     document.getElementById("task_name").value = aux_name;
     document.getElementById("task_deadline").value = aux_deadline;
     document.getElementById("category_list").value = aux_category;
@@ -90,7 +90,7 @@ Funció que controla que no hi hagi cap camp buit abans d'enviar el formulari
 Author: Roger Casas Aisa (roger.casas)
 */
 function errorCheck(mode, modify_id){
-        var error = document.getElementById("error")
+        var error = document.getElementById("error");
         var flag = "0";
         if(document.getElementById("task_name").value == ""){
             error.textContent = "Title required. Maximum 100 characters length.";
@@ -112,7 +112,7 @@ function errorCheck(mode, modify_id){
                             error.style.color = "red";
                             flag = "1";
                         }else{
-                                if(!document.getElementById("logo").value){
+                                if(document.getElementById("logo").value == "empty"){
                                     error.textContent = "Image required. Please select one.";
                                     error.style.color = "red";
                                     flag = "1";
