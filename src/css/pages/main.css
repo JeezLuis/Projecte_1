@@ -50,8 +50,8 @@ nav a{
     color: #000000;
     text-decoration: none;
     font-weight: 500;
-    font-size: 24px;
-    margin: 20px;
+    font-size: 20px;
+    margin: 10px;
     width: 100%;
 }
 
@@ -65,7 +65,7 @@ nav .unselected{
     text-shadow: unset;
 }
 
-.today:before {
+nav .today:before {
     display: inline-flex;
     content: '';
     background-image: url("../../media/img/today-outline-svgrepo-com.svg");
@@ -87,7 +87,7 @@ nav .unselected{
     padding-right: 10px;
 }
 
-.categories:before {
+nav .categories:before {
     display: inline-flex;
     content: '';
     background-image: url("../../media/img/categories-svgrepo-com.svg");
@@ -105,13 +105,12 @@ nav .unselected{
     border-radius: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 70%;
+    text-align:center;
 }
 
 .hard-color-b{
     background-color: #6247AA;
     color: #FFFFFF;
-    width: 100%;
 }
 
 .light-color-b{
@@ -126,4 +125,59 @@ nav .unselected{
 
 .disabled-b{
     visibility: hidden;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    display: flex;
+    padding-top: 30px;
+    grid-column-gap: 10px;
+}
+
+.task h1 {
+    font-weight: 400;
+
+}
+
+.task object {
+    width: 30px;
+    height: 30px;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.task-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;   
+}
+
+.task-extra {
+    align-self: stretch
+}
+
+.task-extra div{
+    display: flex;
+}
+
+.content {
+    padding: 30px;
 }

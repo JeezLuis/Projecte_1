@@ -30,20 +30,47 @@
                     <p id="urgent">1 urgent</p>
                 </div>
             </div>
-            <a href="task-form.html"><button class="button hard-color-b">Add TODO</button></a>
+            <a href="task-form.html" class="button hard-color-b">Add TODO</a>
             <a href="" class="today">Today</a>
             <a href="" class="all-duties selected">All Duties</a>
             <a href="" class="categories">Categories</a>
         </nav>
 
-        <div>
-            <a href="" class="all-duties selected">All Duties</a>
+        <div class="content">
+            <h1 class="all-duties selected">All Duties</h1>
             <div class="toolbar">
-                
+                <button class="button light-color-b">Select All</button>
+                <button></button>
+                <button></button>
             </div>
             
-            <div id="tasques">
-                
+            <div id="tasques" class="task-list">
+
+                <!--Principi tasca-->
+
+                <div class="task">
+                    <div class="select" onClick="console.log('Test')">
+                        <object data="media/img/un-checkbox-svgrepo-com.svg"> </object>
+                    </div>
+                    
+                    <div class="task-info">
+                        <img src="media/img/jojo_logo_small.png" alt="">
+                        <div class="task-main">
+                            <h2>Web Projects</h2>
+                            <p>Bla bla bla...</p>
+                        </div>
+                        <div class="task-extra">
+                            <p>20/11/2021</p>
+                            <div> <!--Categories-->
+                                <p class="green">Development</p>
+                                <p class="blue">Miscellaneous</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Fi tasca-->
+
             </div>
         </div>
         
