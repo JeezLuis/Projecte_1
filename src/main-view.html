@@ -40,17 +40,24 @@
             <h1 class="all-duties selected">All Duties</h1>
             <div class="toolbar">
                 <button class="button light-color-b">Select All</button>
-                <button></button>
-                <button></button>
+
+                <button class="do button"><object data="media/img/tick-svgrepo-com.svg"></object></button>
+                <button class="delete button"><object data="media/img/trash-svgrepo-com.svg"></object></button>
+
+                <form role="search" id="form">
+                    <input type="search" id="query" name="q" placeholder="">
+                    <button>
+                      <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                    </button>
+                  </form>
             </div>
             
             <div id="tasques" class="task-list">
 
                 <!--Principi tasca-->
-
                 <div class="task">
                     <div class="select" onClick="console.log('Test')">
-                        <object data="media/img/un-checkbox-svgrepo-com.svg"> </object>
+                        <object data="media/img/checkbox-svgrepo-com.svg"> </object>
                     </div>
                     
                     <div class="task-info">
@@ -60,17 +67,16 @@
                             <p>Bla bla bla...</p>
                         </div>
                         <div class="task-extra">
-                            <p>20/11/2021</p>
-                            <div> <!--Categories-->
-                                <p class="green">Development</p>
-                                <p class="blue">Miscellaneous</p>
+                            <div>
+                                <p class="urgent">Urgent!</p>
+                                <p>20/11/2021</p>
                             </div>
+                            <p class="blue">Miscellaneous</p>
                         </div>
                     </div>
                 </div>
-
                 <!--Fi tasca-->
-
+            
             </div>
         </div>
         
