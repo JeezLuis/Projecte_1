@@ -1,4 +1,60 @@
 /*
+Codi que s'executarà cada cop que es carregui la pàgina per a comprovar si hi ha alguna tasca per a modificar
+Author: Roger Casas Aisa (roger.casas)
+*/
+let check = localStorage.getItem("modify");
+if(check == ""){
+    document.getElementById("task_accept").onclick = `errorCheck(0,0)`;
+    document.getElementById("task_name").value = "";
+    document.getElementById("task_deadline").value = "";
+    document.getElementById("category_list").value = "";
+    document.getElementById("task_description").value = "";
+    document.getElementById("task_completed").checked = false;
+    document.getElementById("logo").src = "media/img/select_image_icon.png";
+    document.getElementById("logo").value = "empty";
+}else{
+    let aux = localStorage.getItem("modify");
+    let aux_id = aux.split('$')[0];
+    let aux_name = aux.split('$')[1];
+    let aux_deadline = aux.split('$')[2];
+    let aux_category = aux.split('$')[3];
+    let aux_description = aux.split('$')[4];
+    let aux_completed = aux.split('$')[5];
+    let aux_logo = aux.split('$')[6];
+
+    document.getElementById("task_accept").onclick =`errorCheck(1, ${aux_id})`;
+    document.getElementById("task_name").value = aux_name;
+    document.getElementById("task_deadline").value = aux_deadline;
+    document.getElementById("category_list").value = aux_category;
+    document.getElementById("task_description").value = aux_description;
+    if(aux_completed == "1"){
+        document.getElementById("task_completed").checked = true;
+    }else{
+        document.getElementById("task_completed").checked = false;
+    }
+    switch(aux_logo){
+        case "1": document.getElementById("logo").src="../src/media/img/la_salle_logo_big.png";
+            document.getElementById("logo").value = "1";  
+            break;  
+        case "2": document.getElementById("logo").src="../src/media/img/lec_logo_big.png";
+            document.getElementById("logo").value = "2";
+            break;
+        case "3": document.getElementById("logo").src="../src/media/img/kekistan_logo_big.png"; 
+            document.getElementById("logo").value = "3";  
+            break;
+        case "4": document.getElementById("logo").src="../src/media/img/skyrim_logo_big.png";   
+            document.getElementById("logo").value = "4";
+            break;
+        case "5": document.getElementById("logo").src="../src/media/img/kim_logo_big.png"; 
+            document.getElementById("logo").value = "5";  
+            break;
+        case "6": document.getElementById("logo").src="../src/media/img/jojo_logo_big.png";  
+            document.getElementById("logo").value = "6"; 
+            break;
+    }
+}
+
+/*
 Author: Roger Casas Aisa (roger.casas)
 */
 
@@ -74,8 +130,9 @@ function errorCheck(mode, modify_id){
             let task_category = document.getElementById("category_list").value;
             let task_description = document.getElementById("task_description").value;
             let task_completed = document.getElementById("task_completed").value;
+            let task_logo = document.getElementById("logo").value;
 
-            let msg = task_name + "$" + task_deadline + "$" + task_category + "$" + task_description + "$" + task_completed;
+            let msg = task_name + "$" + task_deadline + "$" + task_category + "$" + task_description + "$" + task_completed + "$" + task_logo;
 
             localStorage.setItem(task_id, msg);
             window.location = "main-view.html";
@@ -103,6 +160,7 @@ Funció que recarrega la pagina a peticio de l'usuari
 Author: Roger Casas Aisa (roger.casas)
 */
 function pageReload(){
+    localStorage.setItem("modify", "");
     location.reload();
 }
 
