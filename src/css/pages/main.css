@@ -279,3 +279,11 @@ form {
       color: #6247AA;
       margin-right: 20px;
   }
+
+  .selected-task {
+    background-color: #AAA1C8;
+  }
+
+  .selected-task + div {
+    background-color: rgba(170, 161, 200, 0.75);
+  }
