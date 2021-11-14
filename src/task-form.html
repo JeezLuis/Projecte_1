@@ -1,3 +1,5 @@
+<!--Classe que implementa la pàgina amb el formulari per a afegir noves tasques o modificar d'existents-->
+<!--Author: Roger Casas Aisa (roger.casas)-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,10 +21,72 @@
     </header>
     <main>
         
-    </main>
-    <footer>
+            <div>
+                  <img src="media/img/select_image_icon.png" id="logo" value="empty"> 
+            
+                  <a href='#' onclick="updateImage(1)"><img src="media/img/la_salle_logo_small.png" id="salle_logo"/></a>
+                  <a href='#' onclick="updateImage(2)"><img src="media/img/lec_logo_small.png" id="lec_logo"/></a>
+                  <a href='#' onclick="updateImage(3)"><img src="media/img/kekistan_logo_small.png" id="kekistan_logo"/></a>
+                  <a href='#' onclick="updateImage(4)"><img src="media/img/skyrim_logo_small.png" id="skyrim_logo"/></a>
+                  <a href='#' onclick="updateImage(5)"><img src="media/img/kim_logo_small.png" id="kim_logo"/></a>
+                  <a href='#' onclick="updateImage(6)"><img src="media/img/jojo_logo_small.png" id="jojo_logo"/></a>
+            </div>
+            <br>
+      <div>
+                  <label for="name">Title:</label>
+                  <input type="text" id="task_name" name="task_name" maxlength="100" placeholder="Task Name..."/>
+                  <label for="name">Deadline:</label>
+                  <input type="date" id="task_deadline" name="task_deadline" />
+            </div>
+            <br>
+
+            <div>
+                  <label for="mail">Category:</label>
+                  <select id="category_list" name="category">
+                        <option value="" selected disabled hidden>Select Category</option>
+                        <option value="1">College</option>
+                        <option value="2">Social</option>
+                        <option value="3">Medical</option>
+                        <option value="4">Meeting</option>
+                        <option value="5">Exam</option>
+                        <option value="6">Party</option>
+                        <option value="7">Homework</option>
+                  </select>
+            </div>
+            <br>
+
+            <div>
+                  <label for="msg">Description:</label>
+                  <textarea id="task_description" name="task_description" maxlength="1000" placeholder="Task Description..."></textarea>
+            </div>
+            <br>
+
+            <div>
+                  <span id="error"></span>
+            </div>
+            <br>
+
+            <div>
+                  <input type="checkbox" id="task_completed" name="task_completed" value="0" onclick="changeCompleted()">
+                  <label for="task_completed">Completed</label>
+                  <button onclick="pageReload()">
+                        Reset
+                  </button>
+                  <a href="main-view.html">
+                        <button>Cancel</button>
+                  </a>
+                  <button onclick="errorCheck(0,0)">
+                        Accept
+                  </button>
+            </div>
+
         
+    </main>
+
+    <footer>
+        <script src="js/pages/scripts_form.js"></script>
     </footer>
+
 </body>
 
 </html>
